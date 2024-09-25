@@ -1,0 +1,11 @@
+---
+- name: Create users
+  hosts: localhost
+  become: true
+  tasks:
+          - name: Ensure the user "user1" exists or not
+            user:
+                    name: user1
+                    shell: /bin/bash
+                    state: present
+            
